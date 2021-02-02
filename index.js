@@ -165,7 +165,6 @@ export default class RNSketchCanvas extends React.Component {
     cropToImageSize,
     callback
   ) {
-    console.log("get base 64");
     this._sketchCanvas.getBase64(
       imageType,
       transparent,

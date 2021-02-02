@@ -12,7 +12,6 @@ import ReactNative, {
   ViewPropTypes,
   processColor
 } from 'react-native'
-import { requestPermissions } from './handlePermissions';
 
 const RNSketchCanvas = requireNativeComponent('RNSketchCanvas', SketchCanvas, {
   nativeOnly: {
@@ -216,14 +215,7 @@ class SketchCanvas extends React.Component {
       },
     });
   }
-
-  async componentDidMount() {
-    const isStoragePermissionAuthorized = await requestPermissions(
-      this.props.permissionDialogTitle,
-      this.props.permissionDialogMessage,
-    );
-  }
-
+  
   render() {
     return (
       <RNSketchCanvas
